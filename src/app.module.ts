@@ -2,6 +2,10 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
+import { ProjectsModule } from './projects/projects.module';
+import { TechnologiesModule } from './technologies/technologies.module';
+import { RepositoriesModule } from './repositories/repositories.module';
+import { DiagramsModule } from './diagrams/diagrams.module';
 
 @Module({
   imports: [
@@ -18,6 +22,14 @@ import { AuthModule } from './auth/auth.module';
     }),
 
     AuthModule,
+
+    ProjectsModule,
+
+    TechnologiesModule,
+
+    RepositoriesModule,
+
+    DiagramsModule,
   ],
   controllers: [],
   providers: [],
